@@ -75,10 +75,10 @@ export default function App() {
           App desenvolvido por{' '} 
           <Text
             style={{ color: '#1f6f8b', textDecorationLine: 'underline' }}
-            onPress={() => Linking.openURL('https://github.com/helloAle')}
-          >
+            onPress={() => Linking.openURL('https://github.com/helloAle')}>
             github.com/helloAle
           </Text>
+          
         </Text>
       </View>
       
