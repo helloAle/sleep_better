@@ -4,10 +4,8 @@
 Sleep Better é um aplicativo móvel para iOS que auxilia os usuários a melhorar seus horários de sono por meio de monitoramento inteligente e dicas personalizadas.
 
 ## Funcionalidades
-- Monitoramento dos padrões de sono  
-- Alarmes inteligentes para acordar no melhor momento  
-- Dicas personalizadas para melhorar a qualidade do sono  
-- Histórico e estatísticas semanais e mensais  
+- Dicas personalizadas para melhorar a qualidade do sono
+- (trabalhando em mais funcionalidades)
 
 ## Tecnologias
 - Swift / React Native (exemplo)  
@@ -35,6 +33,68 @@ MIT License
 | Ver status do Git              | `git status`                              | Mostra as alterações feitas                        |
 | Adicionar arquivos ao Git      | `git add .`                               | Adiciona todos os arquivos modificados ao stage   |
 | Fazer commit                  | `git commit -m "Mensagem do commit"`       | Salva as mudanças com uma mensagem descritiva     |
-| Enviar mudanças para o remoto | `git push origin main`                      | Envia as mudanças para o branch principal remoto  |
-| Atualizar repositório local   | `git pull origin main`                       | Atualiza seu código com as últimas mudanças do remoto |
+| Enviar mudanças para o remoto | `git push origin master`                      | Envia as mudanças para o branch principal remoto  |
+| Atualizar repositório local   | `git pull origin master`                       | Atualiza seu código com as últimas mudanças do remoto |
 
+## Instalação
+
+Para rodar o Sleep Better localmente:
+
+```bash
+git clone https://github.com/seuusuario/sleep-better.git
+cd sleep-better
+# comandos para instalar dependências, por exemplo:
+npm install
+
+Uso
+Após instalar, execute:
+
+bash
+Copiar
+Editar
+npm start
+E acesse o app no navegador ou dispositivo móvel.
+
+Contribuição
+Contribuições são bem-vindas! Para contribuir:
+
+Faça um fork do repositório
+
+Crie uma branch para sua feature (git checkout -b feature/nome-da-feature)
+
+Faça commit das suas alterações (git commit -m "Descrição da feature")
+
+Envie para sua branch (git push origin feature/nome-da-feature)
+
+Abra um Pull Request para revisão
+
+|----------------------------------------------------------------------|
+|git pull origin main — pega as últimas mudanças do repositório remoto |
+|                                                                      |
+|                                                                      |
+|git add . — adiciona as alterações                                    |    
+|                                                                      |
+|git commit -m "Descrição da alteração" — cria o commit                |                        
+|                                                                      |
+|git push origin main — envia para o GitHub                            |            
+|                                                                      |
+|                                                                      |
+|Para saber em qual branch está:                                       | 
+|                              git branch                              |                    
+|                                                                      |
+|Para criar uma branch nova:                                           |
+|                              git checkout -b nome-da-branch          |
+|                                                                      |
+|Para trocar para outra branch:                                        |
+|                              git checkout nome-da-branch             |
+|----------------------------------------------------------------------|
+
+
+| Letra | Significado         | Status                         |
+| ----- | ------------------- | ------------------------------ |
+| M     | Modified            | Modificado, mas não adicionado |
+| A     | Added               | Adicionado ao stage            |
+| D     | Deleted             | Deletado e staged              |
+| ??    | Untracked           | Não rastreado                  |
+| U     | Unmerged (conflito) | Conflito não resolvido         |
+| R     | Renamed             | Arquivo foi renomeado ou movido|
