@@ -72,12 +72,12 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.button}>
-            <TouchableOpacity
-                style={styles.navigateButton}
-                onPress={() => navigation.navigate('About')}
+          <TouchableOpacity
+              style={styles.navigateButton}
+              onPress={() => navigation.navigate('About')}
             >
-                <Text style={styles.navigateButtonText}>Ir para Sobre</Text>
-            </TouchableOpacity>
+              <Text style={styles.navigateButtonText}>Ir para Sobre</Text>
+          </TouchableOpacity>
         </View>
 
       </ScrollView>
