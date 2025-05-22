@@ -5,7 +5,7 @@ export default function AboutScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Sobre o Sleep Better</Text>
-      <Text style={styles.text}>Versão 0.0.1</Text>
+      <Text style={styles.text}>Versão 0.0.3</Text>
       <Text style={styles.text}>Notas de atualização: 22/05/2025</Text>
       <Text style={styles.text}>Tecnologias: React Native, TypeScript, React Navigation</Text>
 
