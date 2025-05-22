@@ -19,9 +19,6 @@ Sleep Better é um aplicativo móvel para iOS que auxilia os usuários a melhora
 ## Contribuição  
 Sinta-se à vontade para abrir issues ou enviar pull requests.
 
-## Licença  
-MIT License
-
 ## Como usar - comandos essenciais
 
 | Ação                            | Comando                                    | Descrição                                         |
