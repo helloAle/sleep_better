@@ -1,31 +1,32 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { TextInput, Button, Image, ScrollView, Linking } from 'react-native';
-
-
+import { View, Text, StyleSheet, Linking } from 'react-native';
 
 export default function AboutScreen() {
   return (
-  <View style={styles.container}>
-    <Text style={styles.text}>Sobre o Sleep Better</Text>
-    <Text style={styles.text}>Versão 0.0.1</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Sobre o Sleep Better</Text>
+      <Text style={styles.text}>Versão 0.0.1</Text>
+      <Text style={styles.text}>Notas de atualização: 22/05/2025</Text>
+      <Text style={styles.text}>Tecnologias: React Native, TypeScript, React Navigation</Text>
 
-    <View style={styles.footer}>
-      <Text style={styles.footerText}>
-        App desenvolvido por{' '}
-        <Text
-          style={{ color: '#1f6f8b', textDecorationLine: 'underline' }}
-          onPress={() => Linking.openURL('https://github.com/helloAle')}>
-          github.com/helloAle
+      <Text style={styles.sectionTitle}>🚧 Futuras funcionalidades</Text>
+      <Text style={styles.text}>• Integração com notificações</Text>
+      <Text style={styles.text}>• Monitoramento de sono</Text>
+
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>
+          App desenvolvido por{' '}
+          <Text
+            style={{ color: '#1f6f8b', textDecorationLine: 'underline' }}
+            onPress={() => Linking.openURL('https://github.com/helloAle')}
+          >
+            github.com/helloAle
+          </Text>
         </Text>
-      </Text>
+      </View>
     </View>
-  </View>
-);
-
+  );
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -33,14 +34,30 @@ const styles = StyleSheet.create({
     backgroundColor: '#0d1b2a',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 20,
+    paddingBottom: 60, // para o footer não sobrepor
   },
-  text: {
+  title: {
+    color: '#fff',
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  sectionTitle: {
+    marginTop: 25,
+    marginBottom: 10,
     color: '#fff',
     fontSize: 18,
-    marginBottom: 10,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
-
-  
+  text: {
+    color: '#a3b8cc',
+    fontSize: 16,
+    marginBottom: 5,
+    textAlign: 'center',
+  },
   footer: {
     position: 'absolute',
     bottom: 0,
@@ -56,7 +73,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 12,
   },
-
 });
 
 //    _____                                            .___
