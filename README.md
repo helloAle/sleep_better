@@ -98,3 +98,11 @@ Abra um Pull Request para revisão
 | ??    | Untracked           | Não rastreado                  |
 | U     | Unmerged (conflito) | Conflito não resolvido         |
 | R     | Renamed             | Arquivo foi renomeado ou movido|
+
+
+#    _____                                            .___
+#   / ___ \  _________________  ________    ____    __| _/
+#  / / ._\ \/  ___/\___   /\  \/  /\__  \  /    \  / __ | 
+# <  \_____/\___ \  /    /  >    <  / __ \|   |  \/ /_/ | 
+#  \_____\ /____  >/_____ \/__/\_ \(____  /___|  /\____ | 
+#               \/       \/      \/     \/     \/      \/ 
