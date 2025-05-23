@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -19,6 +19,7 @@ export default function SleepChartScreen() {
 
   return (
     <View style={styles.container}>
+      <Image source={require('./assets/icon.png')} style={styles.icon} />
       <Text style={styles.title}>Seu Histórico de Sono</Text>
       <LineChart
         data={{
@@ -48,6 +49,12 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  icon: {
+    width: 80,
+    height: 80,
+    marginBottom: 20,
+    resizeMode: 'contain',
   },
   title: {
     color: '#fff',

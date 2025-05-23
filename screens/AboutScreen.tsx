@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, Linking } from 'react-native';
+import { View, Text, Image, StyleSheet, Linking } from 'react-native';
 
 export default function AboutScreen() {
   return (
     <View style={styles.container}>
+      <Image source={require('./assets/icon.png')} style={styles.icon} />
       <Text style={styles.title}>Sobre o Sleep Better</Text>
-      <Text style={styles.text}>Versão 1.0.0</Text>
+      <Text style={styles.text}>Versão 1.0.1</Text>
       <Text style={styles.text}>Notas de atualização: 23/05/2025</Text>
       <Text style={styles.text}>Tecnologias: React Native, TypeScript, React Navigation</Text>
 
@@ -38,6 +39,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
     paddingBottom: 60, // para o footer não sobrepor
+  },
+  icon: {
+    width: 80,
+    height: 80,
+    marginBottom: 20,
+    resizeMode: 'contain',
   },
   title: {
     color: '#fff',

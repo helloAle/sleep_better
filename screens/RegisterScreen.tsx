@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Linking } from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, Linking } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export default function RegisterScreen() {
@@ -7,6 +7,7 @@ export default function RegisterScreen() {
 
   return (
     <View style={styles.container}>
+      <Image source={require('./assets/icon.png')} style={styles.icon} />
       <Text style={styles.title}>Sleep Better</Text>
       <Text style={styles.subtitle}>Descubra os melhores horários para dormir e acorde renovado</Text>
 
@@ -46,6 +47,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+  },
+  icon: {
+    width: 80,
+    height: 80,
+    marginBottom: 20,
+    resizeMode: 'contain',
   },
   title: {
     fontSize: 26,

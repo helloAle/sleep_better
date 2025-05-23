@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import Slider from '@react-native-community/slider'; // <- Import correto
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -10,6 +10,7 @@ export default function SleepRegisterScreen() {
 
   return (
     <View style={styles.container}>
+      <Image source={require('./assets/icon.png')} style={styles.icon} />
       <Text style={styles.title}>Registro de Sono</Text>
       <Text style={styles.value}>{sleepValue} horas</Text>
 
@@ -65,6 +66,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+  },
+  icon: {
+    width: 80,
+    height: 80,
+    marginBottom: 20,
+    resizeMode: 'contain',
   },
   title: {
     color: '#fff',
