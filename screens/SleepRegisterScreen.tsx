@@ -1,55 +1,85 @@
-// import React, { useState } from 'react';
-// import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
-// import AsyncStorage from '@react-native-async-storage/async-storage';
-// import { SleepEntry } from '../SleepData';
-// import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import Slider from '@react-native-community/slider'; // <- Import correto
+import { useNavigation } from '@react-navigation/native';
 
-// export default function SleepRegisterScreen() {
-//   const [hours, setHours] = useState<string>('');
-//   const navigation = useNavigation();
+export default function SleepRegisterScreen() {
+  const [sleepValue, setSleepValue] = useState(7);
+  const navigation = useNavigation();
 
-//   const saveSleepEntry = async () => {
-//     const parsedHours = parseFloat(hours);
-//     if (isNaN(parsedHours) || parsedHours < 0 || parsedHours > 24) {
-//       Alert.alert('Informe um número válido de horas');
-//       return;
-//     }
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Registro de Sono</Text>
+      <Text style={styles.value}>{sleepValue} horas</Text>
 
-//     const newEntry: SleepEntry = {
-//       date: new Date().toISOString().split('T')[0],
-//       hoursSlept: parsedHours,
-//     };
+      <Slider
+        style={{ width: '100%', height: 40 }}
+        minimumValue={1}
+        maximumValue={12}
+        step={1}
+        value={sleepValue}
+        onValueChange={setSleepValue}
+        minimumTrackTintColor="#4CAF50"
+        maximumTrackTintColor="#FFC107"
+        thumbTintColor="#2196F3"
+      />
 
-//     try {
-//       const existing = await AsyncStorage.getItem('sleepData');
-//       const data: SleepEntry[] = existing ? JSON.parse(existing) : [];
-//       data.push(newEntry);
-//       await AsyncStorage.setItem('sleepData', JSON.stringify(data));
-//       Alert.alert('Registrado com sucesso!');
-//       setHours('');
-//       navigation.navigate('SleepGraph');
-//     } catch (error) {
-//       Alert.alert('Erro ao salvar os dados.');
-//     }
-//   };
+      <View style={styles.labels}>
+        <Text style={{ color: 'red' }}>Pouco</Text>
+        <Text style={{ color: 'green' }}>Ideal</Text>
+        <Text style={{ color: 'gold' }}>Muito</Text>
+      </View>
 
-//   return (
-//     <View style={styles.container}>
-//       <Text style={styles.title}>Registrar Sono</Text>
-//       <TextInput
-//         style={styles.input}
-//         placeholder="Horas dormidas (ex: 7.5)"
-//         keyboardType="numeric"
-//         value={hours}
-//         onChangeText={setHours}
-//       />
-//       <Button title="Salvar" onPress={saveSleepEntry} color="#1f6f8b" />
-//     </View>
-//   );
-// }
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          console.log('Sono registrado:', sleepValue);
+          navigation.navigate('SleepChart');
+        }}
+      >
+        <Text style={styles.buttonText}>Registrar</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
 
-// const styles = StyleSheet.create({
-//   container: { flex: 1, justifyContent: 'center', padding: 20, backgroundColor: '#0d1b2a' },
-//   title: { fontSize: 24, color: '#fff', textAlign: 'center', marginBottom: 20 },
-//   input: { backgroundColor: '#fff', padding: 10, marginBottom: 20, borderRadius: 5 },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0d1b2a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    marginBottom: 20,
+    fontWeight: 'bold',
+  },
+  value: {
+    color: '#fff',
+    fontSize: 32,
+    marginBottom: 10,
+  },
+  labels: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    paddingHorizontal: 10,
+    marginTop: 10,
+  },
+  button: {
+    marginTop: 30,
+    backgroundColor: '#1f6f8b',
+    padding: 15,
+    borderRadius: 10,
+    width: '100%',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});

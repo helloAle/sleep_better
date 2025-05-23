@@ -6,8 +6,9 @@ import HomeScreen from './screens/HomeScreen';
 import AboutScreen from './screens/AboutScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
-// import SleepRegisterScreen from './screens/SleepRegisterScreen';
-// import SleepGraphScreen from './screens/SleepGraphScreen';
+
+import SleepRegisterScreen from './screens/SleepRegisterScreen';
+// import SleepChartScreen from './screens/SleepChartScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,8 +20,9 @@ export default function App() {
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="About" component={AboutScreen} />
-        {/* <Stack.Screen name="SleepRegister" component={SleepRegisterScreen} />
-        <Stack.Screen name="SleepGraph" component={SleepGraphScreen} /> */}
+        
+        <Stack.Screen name="SleepRegister" component={SleepRegisterScreen} />
+        {/* <Stack.Screen name="SleepChart" component={SleepChartScreen} /> */}
 
       </Stack.Navigator>
     </NavigationContainer>

@@ -73,6 +73,15 @@ export default function HomeScreen() {
 
         <View style={styles.button}>
           <TouchableOpacity
+            style={styles.navigateButton}
+            onPress={() => navigation.navigate('SleepRegister')}
+          >
+            <Text style={styles.navigateButtonText}>Ir para Registro</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.button}>
+          <TouchableOpacity
               style={styles.navigateButton}
               onPress={() => navigation.navigate('About')}
             >
