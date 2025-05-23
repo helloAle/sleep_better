@@ -5,10 +5,11 @@ export default function AboutScreen() {
   return (
     <View style={styles.container}>
       <Image source={require('./assets/icon.png')} style={styles.icon} />
-      <Text style={styles.title}>Sobre o Sleep Better</Text>
+      <Text style={styles.title}>Sobre o Sleep Better 2.0</Text>
       <Text style={styles.text}>Versão 1.0.2</Text>
       <Text style={styles.text}>Notas de atualização: 23/05/2025</Text>
       <Text style={styles.text}>Tecnologias: React Native, TypeScript, React Navigation</Text>
+      <Text style={styles.text}>Anteriormente "Sleep Better", Sleep Better 2.0 é um reboot feito para um projeto academico, inspirado em seu antecessor, que auxiliava no sono e dicas para uma rotina mais saudável; sua recriação se da ao fato dos demais integrantes do grupo não estarem presente em sua criação.</Text>
       <Text style={styles.text}>ツ</Text>
 
       <Text style={styles.sectionTitle}>🚧 Futuras funcionalidades</Text>

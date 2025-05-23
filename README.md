@@ -1,4 +1,4 @@
-# Sleep Better
+# Sleep Better 2.0
 Projeto para a matéria de Fábrica de Software da Universidade Evangelica de Goiás
 
 ## Descrição  

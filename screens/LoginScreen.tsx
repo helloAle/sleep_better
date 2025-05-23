@@ -8,7 +8,8 @@ export default function LoginScreen() {
   return (
     <View style={styles.container}>
       <Image source={require('./assets/icon.png')} style={styles.icon} />
-      <Text style={styles.title}>Sleep Better</Text>
+      <Image source={require('./assets/logo2.png')} style={styles.logo} />
+      {/* <Text style={styles.title}>Sleep Better</Text> */}
       <Text style={styles.subtitle}>Descubra os melhores horários para dormir e acorde renovado</Text>
 
       <TextInput placeholder="Login" style={styles.input} />
@@ -45,7 +46,13 @@ const styles = StyleSheet.create({
   icon: {
     width: 80,
     height: 80,
-    marginBottom: 20,
+    marginBottom: -20,
+    resizeMode: 'contain',
+  },
+  logo: {
+    width: 300,
+    height: 120,
+    marginBottom: -20,
     resizeMode: 'contain',
   },
   title: {
