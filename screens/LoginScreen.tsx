@@ -29,13 +29,6 @@ export default function LoginScreen() {
       <TouchableOpacity style={styles.aboutButton} onPress={() => navigation.navigate('About')}>
         <Text style={styles.aboutButtonText}>Sobre</Text>
       </TouchableOpacity>
-
-      <Text style={styles.footerText}>
-        App desenvolvido por{' '}
-        <Text style={styles.link} onPress={() => Linking.openURL('https://github.com/helloAle')}>
-          github.com/helloAle
-        </Text>
-      </Text>
     </View>
   );
 }

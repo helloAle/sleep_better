@@ -6,14 +6,20 @@ export default function AboutScreen() {
     <View style={styles.container}>
       <Image source={require('./assets/icon.png')} style={styles.icon} />
       <Text style={styles.title}>Sobre o Sleep Better</Text>
-      <Text style={styles.text}>Versão 1.0.1</Text>
+      <Text style={styles.text}>Versão 1.0.2</Text>
       <Text style={styles.text}>Notas de atualização: 23/05/2025</Text>
       <Text style={styles.text}>Tecnologias: React Native, TypeScript, React Navigation</Text>
+      <Text style={styles.text}>ツ</Text>
 
       <Text style={styles.sectionTitle}>🚧 Futuras funcionalidades</Text>
       <Text style={styles.text}>• Integração com notificações</Text>
       <Text style={styles.text}>• Monitoramento de sono</Text>
       
+      <Text style={styles.text}>ツ</Text>
+
+      <Text style={styles.sectionTitle}>Agradecimentos especiais</Text>
+      <Text style={styles.text}>Leonel • Luis(z?) • Iah • mais alguem</Text>
+      <Text style={styles.text}>Chat gpt • Reddit</Text>
       <Text style={styles.text}>ツ</Text>
 
       <View style={styles.footer}>

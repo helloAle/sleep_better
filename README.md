@@ -1,17 +1,19 @@
 # Sleep Better
+Projeto para a matéria de Fábrica de Software da Universidade Evangelica de Goiás
 
 ## Descrição  
-Sleep Better é um aplicativo móvel para iOS que auxilia os usuários a melhorar seus horários de sono por meio de monitoramento inteligente e dicas personalizadas.
+Sleep Better é um aplicativo móvel para iOS e Android que auxilia os usuários a melhorar seus horários de sono por meio de monitoramento inteligente e dicas personalizadas.
 
 ## Funcionalidades
-- Dicas personalizadas para melhorar a qualidade do sono
+- Revelar melhores horarios para dormir
+- Registrar horas de sono
 - (trabalhando em mais funcionalidades)
 
 ## Tecnologias
-- Swift / React Native (exemplo)  
-- Backend: Node.js / Firebase (exemplo)  
+- Expo / React Native 
+- Node.js 
 
-## Como usar
+## Como usar (no futuro)
 1. Baixe o app na App Store  
 2. Cadastre-se e configure seus horários de sono  
 3. Acompanhe seu progresso e siga as recomendações  
@@ -23,8 +25,8 @@ Sinta-se à vontade para abrir issues ou enviar pull requests.
 
 | Ação                            | Comando                                    | Descrição                                         |
 |--------------------------------|--------------------------------------------|--------------------------------------------------|
-| Clonar repositório             | `git clone <url-do-repositório>`           | Baixa o projeto para sua máquina                  |
-| Entrar na pasta do projeto     | `cd nome-do-projeto`                        | Navega até a pasta do projeto                      |
+| Clonar repositório             | `git clone https://github.com/helloAle/sleep_better`           | Baixa o projeto para sua máquina                  |
+| Entrar na pasta do projeto     | `cd sleep-better`                        | Navega até a pasta do projeto                      |
 | Instalar dependências Node.js  | `npm install`                              | Instala todas as dependências listadas no package.json |
 | Rodar projeto Expo             | `expo start`                              | Inicia o servidor Expo para desenvolvimento       |
 | Ver status do Git              | `git status`                              | Mostra as alterações feitas                        |
@@ -38,9 +40,9 @@ Sinta-se à vontade para abrir issues ou enviar pull requests.
 Para rodar o Sleep Better localmente:
 
 ```bash
-git clone https://github.com/seuusuario/sleep-better.git
+git clone https://github.com/helloAle/sleep_better.git
 cd sleep-better
-# comandos para instalar dependências, por exemplo:
+
 npm install
 
 Uso
