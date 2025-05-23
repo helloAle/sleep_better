@@ -33,28 +33,29 @@ export default function SleepRegisterScreen() {
       </View>
 
       <TouchableOpacity
-            style={styles.button}
-                onPress={async () => {
-                    try {
-                    // Buscar os dados existentes
-                    const existingData = await AsyncStorage.getItem('sleepData');
-                    const parsedData = existingData ? JSON.parse(existingData) : [];
+        style={styles.button}
+        onPress={async () => {
+          try {
+            const existingData = await AsyncStorage.getItem('sleepData');
+            const parsedData = existingData ? JSON.parse(existingData) : [];
 
-                    // Adicionar novo valor
-                    const updatedData = [...parsedData, sleepValue];
+            let updatedData = [...parsedData, sleepValue];
+            if (updatedData.length > 7) {
+              updatedData = updatedData.slice(updatedData.length - 7);
+            }
 
-                    // Salvar de volta
-                    await AsyncStorage.setItem('sleepData', JSON.stringify(updatedData));
+            await AsyncStorage.setItem('sleepData', JSON.stringify(updatedData));
 
-                    console.log('Sono registrado:', sleepValue);
-                    navigation.navigate('SleepChart');
-                    } catch (error) {
-                    console.error('Erro ao registrar sono:', error);
-                    }
-                }}
-            >
-            <Text style={styles.buttonText}>Registrar</Text>
-        </TouchableOpacity>
+            console.log('Sono registrado:', sleepValue);
+            navigation.navigate('SleepChart');
+          } catch (error) {
+            console.error('Erro ao registrar sono:', error);
+          }
+        }}
+      >
+        <Text style={styles.buttonText}>Registrar</Text>
+      </TouchableOpacity>
+
     </View>
   );
 }
