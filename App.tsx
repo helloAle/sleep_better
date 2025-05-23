@@ -8,7 +8,7 @@ import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 
 import SleepRegisterScreen from './screens/SleepRegisterScreen';
-// import SleepChartScreen from './screens/SleepChartScreen';
+import SleepChartScreen from './screens/SleepChartScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,7 +22,7 @@ export default function App() {
         <Stack.Screen name="About" component={AboutScreen} />
         
         <Stack.Screen name="SleepRegister" component={SleepRegisterScreen} />
-        {/* <Stack.Screen name="SleepChart" component={SleepChartScreen} /> */}
+        <Stack.Screen name="SleepChart" component={SleepChartScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>

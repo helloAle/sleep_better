@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Slider from '@react-native-community/slider'; // <- Import correto
 import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function SleepRegisterScreen() {
   const [sleepValue, setSleepValue] = useState(7);
@@ -31,14 +32,28 @@ export default function SleepRegisterScreen() {
       </View>
 
       <TouchableOpacity
-        style={styles.button}
-        onPress={() => {
-          console.log('Sono registrado:', sleepValue);
-          navigation.navigate('SleepChart');
-        }}
-      >
-        <Text style={styles.buttonText}>Registrar</Text>
-      </TouchableOpacity>
+            style={styles.button}
+                onPress={async () => {
+                    try {
+                    // Buscar os dados existentes
+                    const existingData = await AsyncStorage.getItem('sleepData');
+                    const parsedData = existingData ? JSON.parse(existingData) : [];
+
+                    // Adicionar novo valor
+                    const updatedData = [...parsedData, sleepValue];
+
+                    // Salvar de volta
+                    await AsyncStorage.setItem('sleepData', JSON.stringify(updatedData));
+
+                    console.log('Sono registrado:', sleepValue);
+                    navigation.navigate('SleepChart');
+                    } catch (error) {
+                    console.error('Erro ao registrar sono:', error);
+                    }
+                }}
+            >
+            <Text style={styles.buttonText}>Registrar</Text>
+        </TouchableOpacity>
     </View>
   );
 }
