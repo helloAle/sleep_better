@@ -19,7 +19,7 @@ export default function AboutScreen() {
       <Text style={styles.text}>ツ</Text>
 
       <Text style={styles.sectionTitle}>Agradecimentos especiais</Text>
-      <Text style={styles.text}>Leonel • Luis(z?) • Iah • mais alguem</Text>
+      <Text style={styles.text}>Leonel • Luis(z?) • Iah • Carlos Eduardo</Text>
       <Text style={styles.text}>Chat gpt • Reddit</Text>
       <Text style={styles.text}>ツ</Text>
 
